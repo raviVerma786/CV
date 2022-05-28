@@ -15,6 +15,7 @@
     .header{
         margin: 0;
         background-color: rgba(192, 215, 215, 0.872);
+        width: 100%;
     }
     .year,.place{
         float: right;
@@ -41,9 +42,8 @@
         justify-content: center;
         height: 3rem;
     }
-    footer h2{
-        color: white;
-        margin-bottom: 0;
+    footer h3{
+       display: none;
     }
    footer li{
        display: inline-block;
@@ -57,11 +57,51 @@
    a:hover{
        color: rgb(9, 11, 6);
    }
+   @media screen and (max-width:480px) {
+    .header{
+        margin: 0;
+        background-color: rgba(192, 215, 215, 0.872);
+        width: 100%;
+        padding-right: 0;
+    }
+    .year,.place{
+        display: block;
+        padding-left: 0;
+        font-weight: bold;
+    }
+       #photo{
+           display: none;
+       }
+       #right{
+           padding: 1rem 1rem;
+       }
+       footer{
+           background-color: rgb(197, 243, 243);
+           text-align: left;
+           
+       }
+       footer h3{
+       display: block;
+       text-decoration: underline;
+    }
+       footer ul{
+           text-decoration: dotted;
+           list-style-type: disc;
+       }
+       footer li{
+           display: block;
+       }
+       footer li a{
+        padding:0;
+        font-size: 1rem;
+        text-decoration: dotted;
+       }
+   }
 </style>
 <body>
     <table class="header">
         <tr>
-           <td width="15%" height="25%"> <img src="profile.png" alt="profile picture" height="90%" width="90%"></td>
+           <td id="photo" width="15%" height="25%"> <img src="profile.png" alt="profile picture" height="90%" width="90%"></td>
             <td id="left">
                 <h2 class="lowerMargin">
                     Ravi Verma
@@ -149,6 +189,7 @@
         </ul>
     </div>
     <footer>
+        <h3 id="lasthead">Profile Links</h3>
       <ul>
           <li><a href="https://www.linkedin.com/in/ravi-verma-708926164/" target="_blank">Linked-In</a></li>
           <li><a href="https://leetcode.com/ravi_verma786/" target="_blank">Leetcode</a></li>
